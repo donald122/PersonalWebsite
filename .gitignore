@@ -87,3 +87,7 @@ ENV/
 
 # Rope project settings
 .ropeproject
+
+secret.txt
+django/DonProfile/settings.py
+runContainer.sh

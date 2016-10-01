@@ -1,3 +1,0 @@
-docker run -it --name webapp -h webapp donald122/myweb
-docker run -it --volumes-from webapp --name nginxapp -h nginxapp -p 8000:8000 --link webapp:webapp donald122/nginxapp
-docker run -it --name postgres -h postgres -e PGDATA=/var/lib/postgresql/data/pgdata -p 5432:5432 -v postgres-volume:/var/lib/postgresql/data/pgdata postgres

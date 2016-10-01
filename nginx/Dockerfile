@@ -1,4 +1,5 @@
 FROM nginx:latest
+MAINTAINER donald.leung@icloud.com
 
 
 RUN apt-get update && apt-get install -y \

@@ -1,0 +1,30 @@
+.navbar-default {
+	background-color: #fff
+}
+body {
+	font-size: 19px;
+	background-color: #f6f6f6
+}
+.navbar-default .navbar-nav>.active>a, 
+.navbar-default .navbar-nav>.active>a:focus, 
+.navbar-default .navbar-nav>.active>a:hover {
+	background-color: initial;
+	color: #555
+}
+
+.navbar-default .navbar-nav>.active>a:hover {
+	color: #333
+}
+
+
+.navbar-default .navbar-nav>li>a {
+	color: #888
+}
+
+.navbar-nav {
+	margin-left: -15px
+}
+
+.jumbotron {
+	background-color: initial
+}

@@ -90,4 +90,5 @@ ENV/
 
 secret.txt
 django/DonProfile/settings.py
+django/DonProfile/media/*
 runContainer.sh

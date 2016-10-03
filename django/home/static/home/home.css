@@ -28,3 +28,52 @@ body {
 .jumbotron {
 	background-color: initial
 }
+
+hr {
+	border-top: 1px solid #ddd
+}
+
+.slide {
+
+    -moz-animation-name: slide;
+    -moz-animation-iteration-count: 1;
+    -moz-animation-timing-function: ease-out;
+    -moz-animation-duration: 1s;
+
+    -webkit-animation-name: slide;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-timing-function: ease-out;
+    -webkit-animation-duration: 1s;
+
+    animation-name: slide;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-out;
+    animation-duration: 1s;
+
+}
+
+@-moz-keyframes slide {
+    0% {
+        -moz-transform: translateX(-100vw);
+    }
+    100% {
+        -moz-transform: translateX(0);
+    }
+}
+@-webkit-keyframes slide {
+    0% {
+        -webkit-transform: translateX(-100vw);
+    }
+    100% {
+        -webkit-transform: translateX(0);
+    }
+}
+@keyframes slide {
+    0% {
+        transform: translateX(-100vw);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+

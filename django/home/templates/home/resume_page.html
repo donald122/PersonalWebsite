@@ -1,0 +1,62 @@
+{% extends "home/navbar_base.html" %}
+{% load wagtailcore_tags wagtailimages_tags %}
+
+
+{% block content %}
+
+   <!-- Experience row --> 
+      
+    <div class="row resume">
+        
+        <div class="col-sm-4">
+            <h2> EXPERIENCE </h2>                    
+        </div>
+
+        <div class="col-sm-8">
+
+            {% for experience in page.get_experience %}
+            <h3> {{ experience.company }} </h3>
+            <h4> {{ experience.locations }}, {{ experience.duration }} </h4>
+            {{ experience.details | richtext }}
+
+            <hr>            
+
+            {% endfor %}
+
+        </div>
+
+    </div>
+
+    <hr>
+
+    <!-- Education row -->
+    
+    <div class="row resume">
+        
+        <div class="col-sm-4">
+            <h2> Education </h2>                    
+        </div>
+
+        <div class="col-sm-8">
+
+            {% for education in page.get_education %}
+            <h3> {{ education.school }} </h3>
+            <h4> {{ education.locations }}, {{ education.duration }} </h4>
+            <h4> {{ education.program }}
+
+            <hr>
+
+            {% endfor %}
+
+        </div>
+
+    </div>
+
+
+
+
+    <hr>
+
+
+    
+{% endblock %}

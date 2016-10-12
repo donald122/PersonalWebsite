@@ -1,0 +1,53 @@
+{% extends "home/navbar_base.html" %}
+{% load wagtailcore_tags wagtailimages_tags %}
+{% block body_class %}template-homepage{% endblock %}
+
+{% block content %}
+
+    
+      
+    <div class="row">
+        <div class="col-sm-4 text-left">
+            <!-- my introduction -->
+            {{ page.body | richtext }}
+           
+        </div>
+        <div class="col-sm-8">
+            {% image page.aboutme_image fill-600x300 class="img-responsive img-center" %}
+
+                    
+        </div>
+    
+    </div>
+    {# get the catagory interest, hobbies.... #}
+    {% for about_catagory in page.aboutme_container_object_list %}
+    <hr>
+    <div class="row">
+        {# print the catagory #}
+        <h2 class="text-center"> {{ about_catagory.title }} </h2>
+        <hr>
+
+        {% for about_element in about_catagory.get_descendants.live.specific %}
+      
+        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+
+            <div class="hovereffect">
+                {% image about_element.element_image fill-375x250 class="img-responsive center-block img-round"%}
+                <div class="overlay">
+                    <p> {{ about_element.element }} </p>
+                </div>
+            </div>
+
+         </div>
+
+        {% endfor %}
+    </div> 
+
+    {% endfor %}
+            <!-- /.row -->
+
+    <hr>
+
+
+    
+{% endblock %}

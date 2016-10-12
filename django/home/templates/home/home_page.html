@@ -1,0 +1,27 @@
+{% extends "home/navbar_base.html" %}
+{% load wagtailcore_tags wagtailimages_tags %}
+{% block body_class %}template-homepage{% endblock %}
+
+{% block content %}
+
+    
+      
+    <div class="row">
+        <div class="col-sm-4">
+            {% image page.profile_image fill-300x300 class="img-circle img-responsive img-center" %}
+                    
+        </div>
+        <div class="col-sm-8">
+
+            <!-- my introduction -->
+            {{ page.body | richtext }}
+                    
+        </div>
+    </div>
+            <!-- /.row -->
+
+    <hr>
+
+
+    
+{% endblock %}
